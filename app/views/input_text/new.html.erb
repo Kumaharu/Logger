@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>記入してね</title>
+  </head>
+  <body>
+    <center>
+        <h2>場所を記入してほしい</h2>
+
+        <%= form_for Spot.new,:url => {:action => :create} do |f| %>
+          <%= f.label :Spot %>
+          <%= f.text_field :visit %>
+          <%= f.label :comment %>
+          <%= f.text_area :comment %>
+          <%= f.submit "ありがとう" %>
+        <% end %>
+
+    </center>
+
+  </body>
+</html>
