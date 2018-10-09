@@ -5,12 +5,10 @@
   </head>
   <body>
     <center>
-    <h1>あなたの訪れた場所</h1>
-
-      <h2><%= @spot.visit %></h2>
-      <p><%= @spot.comment %></p>
-
-    </center>
+    <h1><%= @spot.visit %></h1>
+    <p><%= @spot.comment %></p>
 
   </body>
 </html>
+<%= link_to 'Home', index_input_path %>
+</center>

@@ -1,21 +1,18 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <title>記入してね</title>
-  </head>
-  <body>
-    <center>
-        <h2>場所を記入してほしい</h2>
+<center>
+<h1>場所を記入してほしい</h1>
+<%= form_for Spot.new,:url => {:action => :create} do |f| %>
+  <p>
+    <%= f.label :visit, "場所" %>
+    <%= f.text_field :visit %>
+  </p>
 
-        <%= form_for Spot.new,:url => {:action => :create} do |f| %>
-          <%= f.label :Spot %>
-          <%= f.text_field :visit %>
-          <%= f.label :comment %>
-          <%= f.text_area :comment %>
-          <%= f.submit "ありがとう" %>
-        <% end %>
+  <p>
+    <%= f.label :comment, "コメント" %>
+    <%= f.text_area :comment %>
+  <p>
 
-    </center>
-
-  </body>
-</html>
+  <p>
+    <%= f.submit "作成する" %>
+  </p>
+<% end %>
+</center>

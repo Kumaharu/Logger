@@ -1,22 +1,21 @@
-<!DOCTYPE html>
-<html>
-  <head>
-      <title>Home</title>
-  </head>
-  <body>
-    <center>
-    <h1>訪れた場所一覧</h1>
+<center>
+<h1>訪れた場所一覧</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>場所</th>
+      </tr>
+    </thead>
 
-    <% @spot.each do |spot| %>
-      <h1><%= spot.visit %></h1>
-      <p><%= spot.comment %></p>
-    <% end %>
+    <tbody>
+      <% @spot.each do |spot| %>
+      <tr>
+        <td><%= spot.visit %></td>
+        <td><%= link_to '詳細', show_input_path(spot) %></td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-    <p>
-      <input type="button" value="訪れた場所を書きましょう" onclick="location.href='./input_text/new'">
-    </p>
-
-    </center>
-
-  </body>
-</html>
+<%= link_to "入力フォームに戻る", new_input_path %>
+</center>
