@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>Show</title>
+      <title>詳細画面</title>
   </head>
   <body>
     <center>
-    <h1><%= @spot.visit %></h1>
-    <p><%= @spot.comment %></p>
-
+      <h1><%= @spot.visit %></h1>
+      <p><%= @spot.comment %></p>
+      <%= link_to 'Home', index_input_path %>
+    </center>
   </body>
-</html>
-<%= link_to 'Home', index_input_path %>
 </center>

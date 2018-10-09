@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Show</title>
+  </head>
+  <body>
+    <center>
+    <h1><%= @spot.visit %></h1>
+    <p><%= @spot.comment %></p>
+
+  </body>
+</html>
+<%= link_to 'Home', index_input_path %>
+</center>
