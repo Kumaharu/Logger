@@ -1,1 +1,9 @@
-sakusei_page
+<h1>タイトルを決めましょう!!</h1>
+
+<%= form_for @board, :url => {:action => 'create'} do |f| %>
+  <%= f.label :title, "タイトル" %>
+  <%= f.text_field :title %>
+  <%= f.submit "作成!!" %>
+<% end %>
+
+
