@@ -1,2 +1,8 @@
 home yeah
 <%= button_to "ボードを作成する", {controller: 'boards', action:'new_board'}, {method: :get} %>
+
+<% @board.each do |board| %>
+  <p>
+    <%= board.title %>
+  </p>
+<% end %>
