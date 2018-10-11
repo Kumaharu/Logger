@@ -15,4 +15,7 @@ class BoardsController < ApplicationController
     @board = Board.new
   end
 
+  def board
+  end
+
 end
