@@ -16,6 +16,8 @@ class BoardsController < ApplicationController
   end
 
   def board
+    @board = Board.find(params[:id])
+
     @new_filed = Filed.new(:board_id => params[:id])
     @filed = Filed.where(:board_id => params[:id])
   end

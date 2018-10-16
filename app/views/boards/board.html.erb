@@ -1,4 +1,6 @@
-ボードの詳細
+<h1>
+  <%= @board.title %>
+</h1>
 
 <%= form_for @new_filed, :url => posts_create_path do |new_filed| %>
   <%= new_filed.text_field :comment %>
