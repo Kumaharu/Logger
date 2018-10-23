@@ -2,7 +2,7 @@
 <h1>Logger</h1>
 <%= button_to "ボードを作成する", {controller: 'boards', action:'new_board'}, {method: :get} %>
 
-<% @board.each do |board| %>
+<% @board.reverse.each do |board| %>
   <p>
     <%= link_to  board.title, boards_board_path(board.id) %>
   </p>
